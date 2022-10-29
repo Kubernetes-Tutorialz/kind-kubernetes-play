@@ -1,2 +1,34 @@
-# kind-kubernetes-play
-A basic Kubernetes environment to play into your containers, learn, test and simulate kubernetesin real life. Enjoy the installtions steps and apply on your side.
+# Kind Kubernetes Play
+
+In this shor repository you can learn and simulate a Kubernetes environment in your local machine.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install foobar
+```
+
+## Usage
+
+```python
+import foobar
+
+# returns 'words'
+foobar.pluralize('word')
+
+# returns 'geese'
+foobar.pluralize('goose')
+
+# returns 'phenomenon'
+foobar.singularize('phenomena')
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
