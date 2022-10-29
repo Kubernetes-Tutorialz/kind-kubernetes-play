@@ -1,29 +1,33 @@
 # Kind Kubernetes Play
 
-In this shor repository you can learn and simulate a Kubernetes environment in your local machine.
+In this short repository you can learn and simulate a Kubernetes environment in your local machine.
+
+## What is Kind?
+[kind](https://kind.sigs.k8s.io/) is a tool for running local Kubernetes clusters using Docker container “nodes”. kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
 ## Installation
+You can install kind with `go get sigs.k8s.io/kind`. This will put `kind` in `$(go env GOPATH)/bin`. You may need to add that directory to your `$PATH` as shown here if you encounter the error `kind: command not found` after installation.
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+On Linux Systems:
 
 ```bash
-pip install foobar
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
 ```
+
+If you are using other operational system, please make sure you have check this [website](https://kind.sigs.k8s.io/docs/user/quick-start).
 
 ## Usage
+To use kind, you will also need to install [docker](https://github.com/amaurybsouza/devops-cheatsheet/blob/main/docker-cheatsheet.md). Please, go ahead and install Docker before go to Kind.
 
-```python
-import foobar
+- Once you have docker running you can create a cluster with:
 
-# returns 'words'
-foobar.pluralize('word')
+`kind create cluster`
 
-# returns 'geese'
-foobar.pluralize('goose')
+- To delete your cluster use:
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+`kind delete cluster`
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
