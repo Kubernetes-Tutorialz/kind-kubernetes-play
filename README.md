@@ -48,6 +48,35 @@ Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/
 
 `kind delete cluster`
 
+## Creatinga cluster (Multi Node)
+In this steps you going to create a Kind cluster with more nodes.
+
+- Please make sure you have the follow `YML` code:
+
+```yml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker
+  - role: worker
+```
+- Using the configuration above, run the following command.  It's will gives you a k8s v1.17.2 cluster with 1 control-plane node and 3 worker nodes.
+
+`kind create cluster --config kind-config.yaml`
+
+- Check if the cluster is working fine:
+
+```bash
+# kubectl get nodes
+NAME                 STATUS   ROLES           AGE   VERSION
+kind-control-plane   Ready    control-plane   24h   v1.25.3
+kind-worker          Ready    <none>          24h   v1.25.3
+kind-worker2         Ready    <none>          24h   v1.25.3
+kind-worker3         Ready    <none>          24h   v1.25.3
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
