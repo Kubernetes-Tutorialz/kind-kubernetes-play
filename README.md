@@ -48,7 +48,7 @@ Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/
 
 `kind delete cluster`
 
-## Creatinga cluster (Multi Node)
+## Creating cluster (Multi-Node)
 In this steps you going to create a Kind cluster with more nodes.
 
 - Please make sure you have the follow `YML` code:
