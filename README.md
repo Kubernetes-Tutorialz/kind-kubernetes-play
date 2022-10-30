@@ -77,6 +77,9 @@ kind-worker2         Ready    <none>          24h   v1.25.3
 kind-worker3         Ready    <none>          24h   v1.25.3
 ```
 
+## Reference
+I have used the oficial documentation from Kind to create my environment. Please, make sure you visited the [Kind documentation](https://kind.sigs.k8s.io/).
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
